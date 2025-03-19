@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox spacing="10.0">
+         <children>
+            <Label text="View Sales History">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableViewTickets" nodeOrientation="LEFT_TO_RIGHT" prefHeight="282.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn prefWidth="100.0" text="Date/Time">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="purchaseDate"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="20.0" prefWidth="125.0" text="Number of Tickets">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="numberOfTickets"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="145.0" text="Customer">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="customerName" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="195.0" text="Showing" id="LeftColumn">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="showingName"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>

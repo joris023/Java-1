@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+       <VBox onMouseClicked="#handleClick" prefHeight="337.0" prefWidth="600.0" spacing="10.0">
+          <children>
+             <Label text="Manage Showings">
+                <font>
+                   <Font size="20.0" />
+                </font>
+             </Label>
+             <TableView fx:id="tableViewShowings" nodeOrientation="LEFT_TO_RIGHT" prefHeight="282.0" prefWidth="600.0">
+               <columns>
+                   <TableColumn prefWidth="125.0" text="Start">
+                       <cellValueFactory>
+                           <PropertyValueFactory property="formattedStartDateTime" />
+                       </cellValueFactory>
+                   </TableColumn>
+                   <TableColumn minWidth="20.0" prefWidth="125.0" text="End">
+                       <cellValueFactory>
+                           <PropertyValueFactory property="formattedEndDateTime" />
+                       </cellValueFactory>
+                   </TableColumn>
+                   <TableColumn prefWidth="220.0" text="Title">
+                       <cellValueFactory>
+                           <PropertyValueFactory property="title" />
+                       </cellValueFactory>
+                   </TableColumn>
+                   <TableColumn minWidth="0.0" prefWidth="90.0" text="Seats Left">
+                       <cellValueFactory>
+                           <PropertyValueFactory property="seatsLeft" />
+                       </cellValueFactory>
+                   </TableColumn>
+               </columns>
+             </TableView>
+             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <children>
+                   <Button id="BlueBack" mnemonicParsing="false" onAction="#addShowingPress" text="Add Showing" />
+                   <Button fx:id="editBtn" disable="true" mnemonicParsing="false" onAction="#editShowingPress" text="Edit Showing" />
+                   <Button id="RedBack" fx:id="deleteBtn" disable="true" mnemonicParsing="false" onAction="#deleteShowingPress" text="Delete Showing" />
+                  <Label fx:id="deleteErrorLabel" text="" />
+                  <Button mnemonicParsing="false" text="Export Showings" onAction="#exportToCsvPress"/>
+                </children>
+             </HBox>
+          </children>
+          <padding>
+             <Insets left="20.0" right="20.0" />
+          </padding>
+       </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,38 @@
+.root {
+    -fx-background-color: lightgray;
+}
+#Dashboard_bar {
+    -fx-background-color: black;
+}
+#Logo {
+    -fx-text-fill: white;
+}
+.button , .toggle-button{
+    -fx-text-fill: white;
+    -fx-background-color: darkgray;
+    -fx-padding: 3 5 3 5;
+    -fx-font-weight: bold;
+}
+#ActiveView {
+    -fx-text-fill: black;
+    -fx-background-color: lightgray;
+}
+#BlueBack {
+    -fx-background-color: blue;
+}
+#RedBack {
+    -fx-background-color: red;
+}
+#WhiteBack {
+    -fx-background-color: white;
+}
+#GreenBack {
+    -fx-background-color: green;
+}
+.table-view .label{
+    -fx-alignment: CENTER_LEFT;
+}
+
+:focused {
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.8), 10, 0, 0, 0);
+}

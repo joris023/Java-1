@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+   <VBox spacing="10">
+      <children>
+         <VBox prefHeight="40.0" prefWidth="600.0">
+            <children>
+               <Label text="Sell Tickets">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="selectedShowingLabel" text="Selected showing: " />
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </VBox>
+         <HBox id="WhiteBack" prefHeight="261.0" prefWidth="600.0">
+            <children>
+               <VBox prefHeight="262.0" prefWidth="42.0" spacing="14.0">
+                  <children>
+                     <Label text="Row 1" />
+                     <Label text="Row 2" />
+                     <Label text="Row 3" />
+                     <Label text="Row 4" />
+                     <Label text="Row 5" />
+                     <Label text="Row 6" />
+                  </children>
+               </VBox>
+               <VBox prefHeight="262.0" prefWidth="388.0">
+                  <children>
+                     <GridPane fx:id="seatsGridPane" hgap="5" prefHeight="184.0" prefWidth="374.0" vgap="5">
+
+                     </GridPane>
+                     <TextField fx:id="customerNameTextField" promptText="Customer name">
+                        <VBox.margin>
+                           <Insets top="15.0" />
+                        </VBox.margin></TextField>
+                     <HBox prefHeight="45.0" prefWidth="382.0" spacing="10.0">
+                        <children>
+                           <Button fx:id="sellTicketBtn" mnemonicParsing="false" onAction="#sellTicketPress" text="Sell" />
+                           <Button mnemonicParsing="false" onAction="#cancelPress" text="Cancel" />
+                        </children>
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox prefHeight="262.0" prefWidth="132.0">
+                  <children>
+                     <Label text="Selected seats:" />
+                     <VBox fx:id="selectedSeatsVbox" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                        <VBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </VBox.margin>
+                     </VBox>
+                  </children>
+               </VBox>
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+         </HBox>
+      </children>
+      <VBox.margin>
+         <Insets left="20.0" right="20.0" />
+      </VBox.margin>
+   </VBox>
+    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets left="20.0" right="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="userLabel" text="Welkom [Name of user]">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="roleLabel" text="You are logged in as [Role]" />
+        <Label fx:id="timeLabel" text="The current date and time is [DD-MM-YYYY HH:MM]" />
+    </children>
+</VBox>
